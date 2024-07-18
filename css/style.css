@@ -716,7 +716,6 @@ main h3 {
   flex-wrap: wrap; 
   justify-content: space-around; 
   align-items: center; 
-  background-color: red; 
 }
 
 .tarjetas img {
