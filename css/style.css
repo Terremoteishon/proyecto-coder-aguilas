@@ -408,7 +408,7 @@ main h3 {
   /*grid-template-columns:2fr, repeat(3, 1fr) ;
   grid-template-rows: repeat(5, 500px) ;*/
   grid-template-columns: 500px 1fr 1fr 1fr;
-  grid-template-rows: 1100px 600px 1000px 750px 800px;
+  grid-template-rows: 1150px 700px 1150px 900px 1000px;
   row-gap: 10px;
   column-gap: 15px;
   /* ----------- GRID AREAS -----------*/
@@ -468,7 +468,7 @@ main h3 {
   margin: 10px;
 }
 
-/*? ---------------------- VALORES --------------------------*/
+/*? --------------------- VALORES --------------------------*/
 .valores {
   grid-area: valor;
   display: flex;
@@ -491,7 +491,7 @@ main h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*? ---------------------- ELEGINOS --------------------------*/
+/*? -------------------- ELEGINOS --------------------------*/
 .eleginos {
   grid-area: elegi;
   display: flex;
@@ -520,7 +520,7 @@ main h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*? ---------------------- VIDEOS --------------------------*/
+/*? --------------------- VIDEOS --------------------------*/
 .videos {
   grid-area: video;
   display: flex;
@@ -537,7 +537,7 @@ main h3 {
   margin: 20px;
 }
 
-/*? ---------------------- ANOTATE --------------------------*/
+/*? --------------------- ANOTATE -------------------------*/
 .anotate {
   grid-area: anota;
   display: flex;
@@ -595,126 +595,112 @@ main h3 {
 /*! ----------------- PAGINA JUEGOS ---------------------*/
 /*! ---------------------- MAIN --------------------------*/
 
-/*? ------------------- CALENDARIO -----------------------*/
-
-
+/*? ------------------ CALENDARIO ----------------------*/
 
 /*? ------------------- JUEGOS -----------------------*/
 
-/*
-.carousel-inner{
-  flex-direction: row;
-}
-*/
-
 .juegos {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 2.5fr 1fr;
-  grid-template-rows: auto;
   gap: 20px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   padding: 10px;
-  border: 2px solid #063f06;
+  border: 2px solid #ffe600;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: white;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 10px;
+  column-gap: 10px;
   grid-template-areas:
-    "prev bod bod end"
+    "preview info side comen"
   ;
 }
 
 .preview {
-  width: 400px;
-  grid-template-areas: prev;
-
-}
-
-.preview h3 {
-  font-size: 30px;
+  flex: 1 1 300px; 
+  margin-right: 20px;
+  grid-area: preview;
 }
 
 .preview img {
   width: 100%;
   height: auto;
+  max-width: 400px; 
+  border-radius: 15px; 
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  grid-template-areas: bod;
-
+.preview h3 {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  color: #ffd000;
 }
+
 
 .carousel-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  grid-area: info;
+  flex: 2 1 600px; 
+  max-width: 600px; 
+  margin-right: 20px;
 }
 
-.carousel-inner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.carousel-inner img {
+  max-height: auto; 
 }
 
-.carousel-item {
-  flex-direction: row;
-  transition: transform 0.5s ease;
-}
-
-.carousel-item img {
-  width: 300px;
-  height: 220px;
-}
-
-.carousel-item.active {
-  transform: scale(1.2);
-}
-
-.carousel-item:not(.active) {
-  opacity: 0.5;
-  transform: scale(0.8);
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-
-.carousel-indicators {
-  display: none;
-}
-
-.buton {
-  direction: row;
-  justify-content: space-around;
-}
 
 .side-content {
+  grid-area: side;
+  flex: 1 1 300px; 
+  max-width: 300px; 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  grid-template-areas: end;
-
+  gap: 20px; 
 }
 
-.side-content iframe,
-.side-content textarea {
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
+.side-content iframe {
+  width: 100%; 
+  border-radius: 15px; 
 }
 
 .side-content a {
-  display: block;
-  margin-bottom: 10px;
+  display: inline-block;
+  margin-top: 10px; 
+  text-decoration: none; 
+  background-color: #ffd000; 
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0); 
+  padding: 10px;
+  border-radius: 5px; 
+}
+.comenarios{
+  grid-area: comen;
 }
 
-.carousel-fade .carousel-caption
+.comenarios textarea {
+  width: 100%; 
+  border-radius: 5px; 
+  padding: 10px; 
+}
+
+.comenarios input[type="submit"],
+.comenarios input[type="reset"] {
+  margin-top: 10px; 
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none; 
+  background-color: #ffd000; 
+  color: white; 
+}
+
 /*! ----------------- PAGINA MERCADO ---------------------*/
 /*! ---------------------- MAIN --------------------------*/
 
@@ -723,12 +709,14 @@ main h3 {
 /*? ------------------- REVIEWS -----------------------*/
 
 /*? ------------------- TARJETAS -----------------------*/
-.tarjetas {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  flex-wrap: wrap;
 
+/*no me esta tomando el flex, y antes si lo hacia*/
+.tarjetas {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  align-items: center; 
+  background-color: red; 
 }
 
 .tarjetas img {
