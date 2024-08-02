@@ -67,6 +67,7 @@ header nav ul li a:hover {
   font-size: 30px;
   background-color: #ffd000;
 }
+
 .navbar-custom h5 {
   color: rgb(0, 0, 0);
   font-size: 30px;
@@ -74,26 +75,36 @@ header nav ul li a:hover {
   font-weight: 400;
   font-style: normal;
 }
+
 .offcanvas-end {
   background-color: #000000;
 }
-.navbar-custom .nav-link, .offcanvas-end .nav-link, .offcanvas-end .nav-item{
+
+.navbar-custom .nav-link,
+.offcanvas-end .nav-link,
+.offcanvas-end .nav-item {
   color: #ffd000;
 }
-.navbar-custom .nav-link:hover, .offcanvas-end .nav-link:hover {
-  color:  #000000; 
+
+.navbar-custom .nav-link:hover,
+.offcanvas-end .nav-link:hover {
+  color: #000000;
 }
+
 .offcanvas-header {
-  background-color: #ffd000; 
-  color: #ffd000; 
+  background-color: #ffd000;
+  color: #ffd000;
 }
+
 .navbar-custom .custom-toggler {
-  border-color: #000000; 
+  border-color: #000000;
 }
+
 .navbar-toggler-icon {
   filter: invert(1);
 }
-header div{
+
+header div {
   background-color: #000000;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -405,8 +416,6 @@ main h3 {
 .grid-cont {
   margin: 0px auto;
   display: grid;
-  /*grid-template-columns:2fr, repeat(3, 1fr) ;
-  grid-template-rows: repeat(5, 500px) ;*/
   grid-template-columns: 500px 1fr 1fr 1fr;
   grid-template-rows: 1150px 700px 1150px 900px 1000px;
   row-gap: 10px;
@@ -620,7 +629,7 @@ main h3 {
 }
 
 .preview {
-  flex: 1 1 300px; 
+  flex: 1 1 300px;
   margin-right: 20px;
   grid-area: preview;
 }
@@ -628,8 +637,8 @@ main h3 {
 .preview img {
   width: 100%;
   height: auto;
-  max-width: 400px; 
-  border-radius: 15px; 
+  max-width: 400px;
+  border-radius: 15px;
 }
 
 .preview h3 {
@@ -642,63 +651,64 @@ main h3 {
 
 .carousel-slide {
   grid-area: info;
-  flex: 2 1 600px; 
-  max-width: 600px; 
+  flex: 2 1 600px;
+  max-width: 600px;
   margin-right: 20px;
 }
 
 .carousel-inner img {
-  max-height: auto; 
+  max-height: auto;
 }
 
 
 .side-content {
   grid-area: side;
-  flex: 1 1 300px; 
-  max-width: 300px; 
+  flex: 1 1 300px;
+  max-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .side-content iframe {
-  width: 100%; 
-  border-radius: 15px; 
+  width: 100%;
+  border-radius: 15px;
 }
 
 .side-content a {
   display: inline-block;
-  margin-top: 10px; 
-  text-decoration: none; 
-  background-color: #ffd000; 
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #ffd000;
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgb(0, 0, 0); 
+  color: rgb(0, 0, 0);
   padding: 10px;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
-.comenarios{
+
+.comenarios {
   grid-area: comen;
 }
 
 .comenarios textarea {
-  width: 100%; 
-  border-radius: 5px; 
-  padding: 10px; 
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .comenarios input[type="submit"],
 .comenarios input[type="reset"] {
-  margin-top: 10px; 
-  padding: 10px 15px; 
-  border-radius: 5px; 
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 5px;
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  border: none; 
-  background-color: #ffd000; 
-  color: white; 
+  border: none;
+  background-color: #ffd000;
+  color: white;
 }
 
 /*! ----------------- PAGINA MERCADO ---------------------*/
@@ -712,10 +722,10 @@ main h3 {
 
 /*no me esta tomando el flex, y antes si lo hacia*/
 .tarjetas {
-  display: flex; 
-  flex-wrap: wrap; 
-  justify-content: space-around; 
-  align-items: center; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tarjetas img {
@@ -727,28 +737,37 @@ main h3 {
 
 .tarjetas div {
   width: 30%;
-  height: 550px;
+  height: 600px;
   border: 4px solid black;
   background-color: rgba(255, 255, 255, 0.521);
   margin: 20px;
   border-radius: 15px;
 }
 
-.tarjetas div h3 {
+.tarjetas div div {
+  width: 100%;
+  height: 25%;
+  border: 0px solid black;
+  margin: 0px;
+  border-radius: 15px;
+}
+
+.tarjetas div div h3 {
   font-size: 25px;
   text-decoration: none;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   color: rgb(0, 0, 0);
 }
 
-.tarjetas div ol {
+.tarjetas div div ul {
   text-decoration: none;
-  text-align: left;
+  text-align: center;
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  padding: 30px;
+  margin-left: 30px;
+  padding: 0px;
   color: rgb(0, 0, 0);
 }
 
@@ -825,15 +844,16 @@ main h3 {
 .formulario .formbot {
   width: 200px;
 }
-.aspirancia .formulario div label{
+
+.aspirancia .formulario div label {
   margin-right: 20px;
 }
 
 .aspirancia .formulario .textarearesp {
-  width: 100%;         
-  height: 200px;      
-  padding: 10px;     
-  font-size: 16px;     
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
   box-sizing: border-box;
   resize: none;
   margin-right: 20px;
@@ -910,39 +930,49 @@ main h3 {
     width: 40%;
     height: auto;
   }
-  .aspirancia{
+
+  .aspirancia {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 30px;
   }
+
   .formulario {
     align-self: center;
   }
-  .formulario img{
+
+  .formulario img {
     margin-top: 30px;
     width: 70%;
     height: auto;
   }
+
   .aspirancia .formulario .miimput {
     align-items: end;
     width: 700px;
 
   }
-  .aspirancia .okey{
-  margin-bottom: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
+
+  .aspirancia .okey {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
+
   .aspirancia .formulario .genero {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+  }
+
+  .show div iframe {
+    margin: 5px;
+  }
+
 }
-
-
 
 
 @media (max-width: 1350px) {
@@ -1021,6 +1051,44 @@ main h3 {
   .footer div p {
     font-size: 20px;
   }
+
+  .tarjetas {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .tarjetas div {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .tarjetas .stats {
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+  }
+
+  .tarjetas img {
+    width: 60%;
+  }
+
+  .show div {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .show div iframe {
+    margin: 5px;
+  }
+
+  .show h2 {
+    text-align: center;
+  }
+
 }
 
 
@@ -1151,19 +1219,22 @@ main h3 {
   .show {
     font-size: 35px;
   }
-  .aspirancia{
+
+  .aspirancia {
     font-size: 25px;
   }
+
   .aspirancia .formulario .miimput {
     align-items: end;
     width: 400px;
 
   }
-  .aspirancia .okey{
-  margin-bottom: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
+
+  .aspirancia .okey {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
   }
 }
 
@@ -1172,422 +1243,470 @@ main h3 {
     font-size: 20px;
   }
 
-@media (max-width: 900px) {
-  .footer p {
-    font-size: 20px;
+  @media (max-width: 900px) {
+    .footer p {
+      font-size: 20px;
+    }
+
+    .footer h2 {
+      font-size: 18px;
+    }
   }
 
-  .footer h2 {
-    font-size: 18px;
+  @media (max-width: 840px) {
+
+    header {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas:
+        "titulo escudo"
+        "nav escudo"
+    }
+
+    header h1 {
+      grid-area: titulo;
+      width: 100%;
+
+    }
+
+    header .logoh {
+      display: none
+    }
+
+    img.escudo {
+      grid-area: escudo;
+      width: auto;
+      height: 200px;
+      margin-bottom: 0px;
+      margin-top: 10px;
+    }
+
+    header div {
+      grid-area: nav;
+      background-color: #000000;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .footer {
+      grid-template-columns: 1fr 2.5fr;
+      grid-template-areas:
+        "parra parra"
+        "logo red1"
+        "logo red2"
+    }
+
+    .footer p {
+      font-size: 20px;
+      grid-row: 1/2;
+      margin-bottom: 0px;
+    }
+
+    .footer h2 {
+      font-size: 20px;
+    }
+
+    .logo-footer {
+      grid-row: 2/4;
+    }
+
+    .red1,
+    red2 {
+      justify-content: center;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    img.escudo {
+      grid-area: escudo;
+      width: auto;
+      height: 150px;
+    }
+
+    .hero div {
+      width: 100%;
+      height: auto;
+    }
+
+    .hero iframe {
+      width: 100%;
+    }
+
+    .hero h2 {
+      width: 80%;
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 10px;
+      align-self: center;
+    }
+
+    .hero h3 {
+      width: 80%;
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 100px;
+      align-self: center;
+    }
+
+    .nuevosimg2 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nuevosimg2 .imgduo {
+      width: 80%;
+      height: auto;
+      margin: 0px;
+    }
+
+    .campos {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15%;
+      margin-right: 15%;
+    }
+
+    .campostext {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .campostext h2 {
+      width: 100%;
+    }
+
+    .show div {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .show iframe {
+      width: 95%;
+      margin: 0px;
+      margin-top: 5px;
+    }
+
+    .show p {
+      font-size: 30px;
+      text-align: justify;
+    }
+  }
+
+  @media (max-width: 640px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    img.escudo {
+      height: 130px;
+      margin-top: 20px;
+      align-self: last baseline;
+    }
+
+    .campos {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    header h1 {
+      margin-bottom: 0px;
+    }
+
+    header {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    .navtext {
+      display: none;
+    }
+
+    header a {
+      color: white;
+      font-size: 20px;
+    }
+
+
+    .tarjetas div {
+      width: 70%;
+      height: 100%;
+      flex-direction: column;
+
+    }
+
+    .tarjetas .stats {}
+
+    .tarjetas img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 590px) {
+    header h1 {
+      font-size: 40px;
+    }
+
+    img.escudo {
+      height: 130px;
+      align-self: last baseline;
+      padding: 10px;
+    }
+
+    .footer {
+      height: 300px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "parra parra parra"
+        "logo red1 red2"
+    }
+
+    .logo-footer {
+      grid-row: 2/3;
+      margin: 0px;
+      width: auto;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer p {
+      font-size: 18px;
+      margin: 0px;
+      padding: 5px;
+    }
+
+    .red1,
+    .red2 {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-logo {
+      width: 100%;
+      max-width: 70px;
+      min-width: 30px;
+      margin-right: 20px;
+    }
+
+    .footer h2 {
+      font-size: 18px;
+    }
+
+    .aspirancia {
+      font-size: 20px;
+    }
+
+    .aspirancia .formulario .miimput {
+      align-items: end;
+      width: 350px;
+
+    }
+
+    .aspirancia .okey {
+      margin-bottom: 30px;
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100%;
+    }
+
+    .show iframe {
+      width: 100%;
+      height: 300px;
+      margin: 0px;
+      margin-top: 5px;
+    }
+
+  }
+
+  @media (max-width: 500px) {
+    header h1 {
+      font-size: 38px;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+    }
+
+    .hero h3 {
+      font-size: 30px;
+    }
+
+    .nuevos div h2 {
+      font-size: 45px;
+    }
+
+    .nuevos div p {
+      font-size: 20px;
+    }
+
+    .campostext p {
+      font-size: 20px;
+    }
+
+    .camposhow p {
+      font-size: 20px;
+    }
+
+    .show p {
+      font-size: 25px;
+    }
+
+    .markers div h2 {
+      font-size: 45px;
+    }
+
+    .markers div p {
+      font-size: 20px;
+    }
+
+    .show p {
+      font-size: 20px;
+    }
+
+    .social-logo {
+      width: 100%;
+      max-width: 70px;
+      min-width: 10px;
+      margin-right: 15px;
+    }
+
+    .footer h2 {
+      font-size: 16px;
+    }
+
+    .footer p {
+      font-size: 15px;
+      margin: 0px;
+      padding: 5px;
+    }
+
+    .aspirancia {
+      font-size: 20px;
+    }
+
+    .aspirancia .formulario .miimput {
+      align-items: end;
+      width: 350px;
+
+    }
+
+    .aspirancia .okey {
+      margin-bottom: 30px;
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100%;
+    }
+
+    .aspirancia h2 {
+      font-size: 50px;
+    }
+
+    .aspirancia .miimput {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .show h2 {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 450px) {
+
+    .nuevos div p {
+      font-size: 18px;
+    }
+
+    .nuevos div h2 {
+      font-size: 40px;
+    }
+
+    .nuevosimg2 .imgduo {
+      width: 100%;
+      height: auto;
+    }
+
+    .campostext p {
+      font-size: 18px;
+    }
+
+    .camposhow p {
+      font-size: 18px;
+    }
+
+    .show p {
+      font-size: 22px;
+    }
+
+    .markers div h2 {
+      font-size: 40px;
+    }
+
+    .markers div p {
+      font-size: 18px;
+    }
+
+    .logo-footer {
+      grid-row: 2/4;
+    }
+
+    .red1,
+    .red2 {
+      margin-right: 5px;
+    }
+
+    .footer h2 {
+      font-size: 15px;
+    }
+
+    .footer {
+      height: 350px;
+      grid-template-columns: 1fr 2.5fr;
+      grid-template-areas:
+        "parra parra"
+        "logo red1"
+        "logo red2"
+    }
+
+    .show iframe {
+
+      height: 200px;
+
+    }
   }
 }
-
-@media (max-width: 840px) {
-
-  header {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas:
-      "titulo escudo"
-      "nav escudo"
-  }
-
-  header h1{
-    grid-area: titulo;
-    width: 100%;
-   
-  }
-
-  header .logoh {
-   display: none
-  }
-
-  img.escudo{
-    grid-area: escudo;
-    width: auto;
-    height: 200px;
-    margin-bottom: 0px;
-    margin-top: 10px;
-  }
-
-  header div{
-    grid-area: nav;
-    background-color: #000000;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
-  .footer {
-    grid-template-columns: 1fr 2.5fr;
-    grid-template-areas:
-      "parra parra"
-      "logo red1"
-      "logo red2"
-  }
-
-  .footer p {
-    font-size: 20px;
-    grid-row: 1/2;
-    margin-bottom: 0px;
-  }
-
-  .footer h2 {
-    font-size: 20px;
-  }
-
-  .logo-footer {
-    grid-row: 2/4;
-  }
-
-  .red1,
-  red2 {
-    justify-content: center;
-  }
-}
-
-
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-  }
-
-  img.escudo{
-    grid-area: escudo;
-    width: auto;
-    height: 150px;
-  }
-  .hero div {
-    width: 100%;
-    height: auto;
-  }
-
-  .hero iframe {
-    width: 100%;
-  }
-
-  .hero h2 {
-    width: 80%;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 10px;
-    align-self: center;
-  }
-
-  .hero h3 {
-    width: 80%;
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 100px;
-    align-self: center;
-  }
-
-  .nuevosimg2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .nuevosimg2 .imgduo {
-    width: 80%;
-    height: auto;
-    margin: 0px;
-  }
-
-  .campos {
-    display: flex;
-    flex-direction: column;
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
-  .campostext {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .campostext h2 {
-    width: 100%;
-  }
-
-  .show div {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .show iframe {
-    width: 100%;
-  }
-
-  .show p {
-    font-size: 30px;
-    text-align: justify;
-  }
-}
-
-@media (max-width: 640px) {
-  header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  img.escudo{
-    height: 130px;
-    margin-top: 20px;
-    align-self: last baseline;
-  }
-
-  .campos {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  header h1 {
-    margin-bottom: 0px;
-  }
-  header {
-    grid-template-columns: 2fr 1fr;
-  }
-  .navtext{
-    display: none;
-  }
-  header a {
-    color: white;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 590px) {
-  header h1 {
-    font-size: 40px;
-  }
-  img.escudo{
-    height: 130px;
-    align-self: last baseline;
-    padding: 10px;
-  }
-  .footer {
-    height: 300px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "parra parra parra"
-      "logo red1 red2"
-  }
-
-  .logo-footer {
-    grid-row: 2/3;
-    margin: 0px;
-    width: auto;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .footer p {
-    font-size: 18px;
-    margin: 0px;
-    padding: 5px;
-  }
-
-  .red1,
-  .red2 {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .social-logo {
-    width: 100%;
-    max-width: 70px;
-    min-width: 30px;
-    margin-right: 20px;
-  }
-
-  .footer h2 {
-    font-size: 18px;
-  }
-
-  .aspirancia{
-    font-size: 20px;
-  }
-  .aspirancia .formulario .miimput {
-    align-items: end;
-    width: 350px;
-
-  }
-  .aspirancia .okey{
-  margin-bottom: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  }
-
-}
-
-@media (max-width: 500px) {
-  header h1 {
-    font-size: 38px;
-  }
-  .hero h2 {
-    font-size: 30px;
-  }
-
-  .hero h3 {
-    font-size: 30px;
-  }
-
-  .nuevos div h2 {
-    font-size: 45px;
-  }
-
-  .nuevos div p {
-    font-size: 20px;
-  }
-
-  .campostext p {
-    font-size: 20px;
-  }
-
-  .camposhow p {
-    font-size: 20px;
-  }
-
-  .show p {
-    font-size: 25px;
-  }
-
-  .markers div h2 {
-    font-size: 45px;
-  }
-
-  .markers div p {
-    font-size: 20px;
-  }
-
-  .show p {
-    font-size: 20px;
-  }
-
-  .social-logo {
-    width: 100%;
-    max-width: 70px;
-    min-width: 10px;
-    margin-right: 15px;
-  }
-
-  .footer h2 {
-    font-size: 16px;
-  }
-
-  .footer p {
-    font-size: 15px;
-    margin: 0px;
-    padding: 5px;
-  }
-
-  .aspirancia{
-    font-size: 20px;
-  }
-  .aspirancia .formulario .miimput {
-    align-items: end;
-    width: 350px;
-
-  }
-  .aspirancia .okey{
-  margin-bottom: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
-  width: 100%;
-  }
-  .aspirancia h2{
-    font-size: 50px;
-  }
-
-  .aspirancia .miimput{
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 450px) {
-
-  .nuevos div p {
-    font-size: 18px;
-  }
-
-  .nuevos div h2 {
-    font-size: 40px;
-  }
-
-  .nuevosimg2 .imgduo {
-    width: 100%;
-    height: auto;
-  }
-
-  .campostext p {
-    font-size: 18px;
-  }
-
-  .camposhow p {
-    font-size: 18px;
-  }
-
-  .show p {
-    font-size: 22px;
-  }
-
-  .markers div h2 {
-    font-size: 40px;
-  }
-
-  .markers div p {
-    font-size: 18px;
-  }
-
-  .logo-footer {
-    grid-row: 2/4;
-  }
-
-  .red1,
-  .red2 {
-    margin-right: 5px;
-  }
-
-  .footer h2 {
-    font-size: 15px;
-  }
-
-  .footer {
-    height: 350px;
-    grid-template-columns: 1fr 2.5fr;
-    grid-template-areas:
-      "parra parra"
-      "logo red1"
-      "logo red2"
-  }
-
-}}
 
 @media (max-width: 400px) {
   .aspirancia .formulario .miimput {
     align-items: end;
     width: 290px;
   }
+
   .aspirancia .formulario .textarearesp {
-    width: 100%;         
-    height: 250px;      
-    padding: 10px;     
-    font-size: 15px;     
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    font-size: 15px;
     box-sizing: border-box;
     resize: none;
   }
 
+  .show h2 {
 
-}
+    font-size: 33px;
 
+  }
 }
