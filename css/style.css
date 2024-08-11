@@ -66,6 +66,7 @@ header nav ul li a:hover {
 .navbar-custom {
   font-size: 30px;
   background-color: #ffd000;
+
 }
 
 .navbar-custom h5 {
@@ -74,6 +75,7 @@ header nav ul li a:hover {
   font-family: "Russo One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  ;
 }
 
 .offcanvas-end {
@@ -416,64 +418,61 @@ main h3 {
 .grid-cont {
   margin: 0px auto;
   display: grid;
-  grid-template-columns: 500px 1fr 1fr 1fr;
-  grid-template-rows: 1150px 700px 1150px 900px 1000px;
-  row-gap: 10px;
-  column-gap: 15px;
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: auto;
+  row-gap: 5px;
+  column-gap: 5px;
   /* ----------- GRID AREAS -----------*/
   grid-template-areas:
-    "galeria intro intro intro"
-    "galeria valor valor valor"
-    "galeria elegi elegi elegi"
-    "galeria video video video"
-    "galeria anota anota anota"
+    "galeria intro"
+    "galeria valor"
+    "galeria elegi"
+    "galeria video"
+    "galeria anota"
   ;
 }
 
-
-/*? -------------------- GALERIA -------------------------*/
-.galeria {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-y: scroll;
-  border: 2px solid #ccc;
-  padding: 15px;
-  grid-area: galeria;
-}
-
-.galeria img {
-  max-width: 100%;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /*? ---------------------- INTRO --------------------------*/
+
 .intro {
   grid-area: intro;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  width: 100vh - 300px;
+}
+
+.intro img {
+  grid-area: logo;
+  margin: 30px;
+  max-width: 40%;
+}
+
+.intro h2 {
+  grid-area: title;
 }
 
 .intro div {
+  grid-area: foto;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
   border-radius: 8px;
+  width: 100%;
 }
 
 .intro p {
+  grid-area: texto;
   padding: 20px;
   text-align: center;
 }
 
 .intro div img {
+  max-height: 400px;
   width: auto;
-  height: 400px;
+  height: 100%;
   margin: 10px;
 }
 
@@ -601,25 +600,51 @@ main h3 {
   padding: 10px;
 }
 
+/*? -------------------- GALERIA -------------------------*/
+.galeria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh);
+  overflow-y: auto;
+  border: 2px solid #ccc;
+  padding: 15px;
+  grid-area: galeria;
+  position: sticky;
+  top: 0;
+}
+
+.galeria img {
+  max-width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /*! ----------------- PAGINA JUEGOS ---------------------*/
 /*! ---------------------- MAIN --------------------------*/
 
 /*? ------------------ CALENDARIO ----------------------*/
 
 /*? ------------------- JUEGOS -----------------------*/
+.ultimos-juegos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .juegos {
-  width: 100%;
+  width: 98%;
   gap: 20px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin: 20px;
   padding: 10px;
   border: 2px solid #ffe600;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   color: white;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr;
   grid-template-rows: auto;
   row-gap: 10px;
   column-gap: 10px;
@@ -629,16 +654,17 @@ main h3 {
 }
 
 .preview {
-  flex: 1 1 300px;
-  margin-right: 20px;
+  margin-right: 10px;
   grid-area: preview;
 }
 
 .preview img {
   width: 100%;
   height: auto;
+  max-height: 300px;
   max-width: 400px;
   border-radius: 15px;
+  align-items: center;
 }
 
 .preview h3 {
@@ -648,31 +674,37 @@ main h3 {
   color: #ffd000;
 }
 
-
 .carousel-slide {
+
+  flex: 2 1 1000px;
+  max-width: 1000px;
+  height: 100%;
+  width: 100%;
+  margin-right: 50px;
+}
+
+.info {
   grid-area: info;
-  flex: 2 1 600px;
-  max-width: 600px;
-  margin-right: 20px;
 }
 
 .carousel-inner img {
   max-height: auto;
+  max-width: auto;
 }
 
 
 .side-content {
   grid-area: side;
-  flex: 1 1 300px;
-  max-width: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-left: 30px;
 }
 
 .side-content iframe {
   width: 100%;
   border-radius: 15px;
+
 }
 
 .side-content a {
@@ -690,12 +722,18 @@ main h3 {
 
 .comenarios {
   grid-area: comen;
+  max-height: auto;
 }
 
 .comenarios textarea {
   width: 100%;
   border-radius: 5px;
   padding: 10px;
+}
+
+.comentarios textarea,
+.comentarios label .comentarios input {
+  width: 100%;
 }
 
 .comenarios input[type="submit"],
@@ -710,6 +748,8 @@ main h3 {
   background-color: #ffd000;
   color: white;
 }
+
+
 
 /*! ----------------- PAGINA MERCADO ---------------------*/
 /*! ---------------------- MAIN --------------------------*/
@@ -860,11 +900,102 @@ main h3 {
 }
 
 
-
-
-
 /*! ------------------ RESPONSIVE ---------------------*/
 /*! ------------------- PAGINA I ----------------------*/
+@media (max-width: 1620px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "logo foto"
+      "title foto"
+      "texto foto";
+  }
+
+  .intro img {
+    align-content: start;
+  }
+
+  .intro div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro p {
+    text-align: justify;
+  }
+
+  .intro div img {
+    max-width: 300px;
+  }
+
+  .valores {}
+
+  .grid-cont p {
+    font-size: 25px;
+    text-align: justify;
+  }
+
+  .eleginos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "title foto"
+      "texto1 foto"
+      "texto2 foto";
+  }
+
+  .eleginos p {
+    font-size: 25px;
+  }
+
+  .eleginos p1 {
+    grid-area: texto1;
+  }
+
+  .eleginos p2 {
+    grid-area: texto2;
+  }
+
+  .eleginos h2 {
+    grid-area: title;
+  }
+
+  .eleginos div {
+    grid-area: foto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .eleginos img {
+    max-width: 400px;
+  }
+
+  .videos p {
+    width: 70%;
+  }
+
+  .anotate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .anotate p {
+    width: 70%;
+  }
+
+  .anotate div p {
+    width: 70%;
+  }
+
+  .anotate a {
+    margin-bottom: 30px;
+  }
+}
+
 @media (max-width: 1550px) {
   .nuevos h2 {
     font-size: 55px;
@@ -872,6 +1003,25 @@ main h3 {
 
   .nuevos div p {
     font-size: 22px;
+  }
+
+  .juegos {
+    display: grid;
+    grid-template-columns: 1fr, 1.5fr, 1fr, 1fr;
+    row-gap: 10px;
+    column-gap: 15px;
+    grid-template-areas:
+      "preview info side comen"
+    ;
+  }
+
+  .juegos p {
+    font-size: 22px;
+  }
+
+  .comenarios textarea {
+    columns: 40;
+
   }
 }
 
@@ -974,6 +1124,41 @@ main h3 {
 
 }
 
+@media (max-width: 1470px) {
+
+  .juegos {
+    align-items: center;
+    padding: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "preview  comen  "
+      " side info  "
+    ;
+  }
+
+  .preview {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-slide {
+    max-width: 700px;
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0px;
+  }
+
+
+}
 
 @media (max-width: 1350px) {
   .nuevosimg1 {
@@ -1208,6 +1393,15 @@ main h3 {
   .markers p {
     padding: 30px;
   }
+
+  .juegos {
+    align-items: center;
+    padding: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    ;
+  }
+
 }
 
 @media (max-width: 980px) {
@@ -1314,6 +1508,38 @@ main h3 {
     red2 {
       justify-content: center;
     }
+
+
+    .juegos {
+      align-items: center;
+      padding: 20px;
+      margin-right: 0px;
+      padding-left: 40px;
+      padding-right: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+    }
+
+    .carousel-slide {
+
+      flex: 2 1 1000px;
+      max-width: 1000px;
+      height: auto;
+      width: 500px;
+      margin-right: 0px;
+    }
+
+    .side-content {
+      grid-area: side;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-left: 0px;
+    }
+
   }
 
 
@@ -1529,6 +1755,19 @@ main h3 {
       margin-top: 5px;
     }
 
+    .carousel-slide {
+      height: auto;
+      width: 400px;
+    }
+
+    .juegos p {
+      font-size: 20px;
+    }
+
+    .ultimos-juegos h2 {
+      font-size: 48px;
+      align-self: center;
+    }
   }
 
   @media (max-width: 500px) {
@@ -1622,6 +1861,11 @@ main h3 {
     .show h2 {
       font-size: 40px;
     }
+
+    .ultimos-juegos h2 {
+      font-size: 40px;
+      align-self: center;
+    }
   }
 
   @media (max-width: 450px) {
@@ -1686,27 +1930,58 @@ main h3 {
       height: 200px;
 
     }
+
+    .juegos {
+      align-items: center;
+      padding: 10px;
+      margin-right: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+    }
+
+    .carousel-slide {
+      height: auto;
+      width: 330px;
+    }
+
+    .juegos p {
+      font-size: 18px;
+    }
+
   }
-}
 
-@media (max-width: 400px) {
-  .aspirancia .formulario .miimput {
-    align-items: end;
-    width: 290px;
+  @media (max-width: 425px) {
+    .ultimos-juegos h2 {
+      font-size: 35px;
+      align-self: center;
+      text-align: center;
+    }
   }
 
-  .aspirancia .formulario .textarearesp {
-    width: 100%;
-    height: 250px;
-    padding: 10px;
-    font-size: 15px;
-    box-sizing: border-box;
-    resize: none;
-  }
+  @media (max-width: 400px) {
+    .aspirancia .formulario .miimput {
+      align-items: end;
+      width: 290px;
+    }
 
-  .show h2 {
+    .aspirancia .formulario .textarearesp {
+      width: 100%;
+      height: 250px;
+      padding: 10px;
+      font-size: 15px;
+      box-sizing: border-box;
+      resize: none;
+    }
 
-    font-size: 33px;
+    .show h2 {
 
+      font-size: 33px;
+
+    }
   }
 }
