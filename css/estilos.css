@@ -3,13 +3,145 @@
   padding: 0;
   box-sizing: border-box; }
 
+.grid-cont .galeria, .grid-cont .intro, .grid-cont .valores, .grid-cont .eleginos, .grid-cont .videos, .grid-cont .anotate, .ultimos-juegos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+main {
+  background-image: url(../img/logo-fondo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+main p {
+  color: white;
+  font-size: 28px;
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+main h2 {
+  color: white;
+  font-size: 50px;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px; }
+
+main h3 {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px; }
+
+.highlight {
+  color: red;
+  font-weight: bold;
+  background-color: black;
+  padding: 5px; }
+
+.navbar-custom {
+  font-size: 30px;
+  background-color: #ffd000; }
+
+.navbar-custom h5 {
+  color: black;
+  font-size: 30px;
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.offcanvas-end {
+  background-color: #000000; }
+
+.navbar-custom .nav-link,
+.offcanvas-end .nav-link,
+.offcanvas-end .nav-item {
+  color: #ffd000; }
+
+.navbar-custom .nav-link:hover,
+.offcanvas-end .nav-link:hover {
+  color: #000000; }
+
+.offcanvas-header {
+  background-color: #ffd000;
+  color: #ffd000; }
+
+.navbar-custom .custom-toggler {
+  border-color: #000000; }
+
+.navbar-toggler-icon {
+  filter: invert(1); }
+
+.nav-item {
+  transform: 1s; }
+
+.offcanvas-body {
+  transform: 1s; }
+
+.nav-item a:hover {
+  background-color: #ff0000;
+  border-radius: 10px;
+  color: #000000;
+  transform: translateX(-30px); }
+
+.formulario {
+  margin-left: 20px;
+  display: flex;
+  align-self: flex-end;
+  flex-direction: column; }
+
+.formulario .miimput {
+  width: 500px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  font-size: 22px;
+  color: #333;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: "Special Elite", system-ui;
+  align-items: flex-end; }
+
+.formulario .genero {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 100px;
+  box-shadow: none;
+  border: none; }
+
+.formulario img {
+  width: 300px;
+  height: 180px;
+  align-self: center; }
+
+.formulario .formbot {
+  width: 200px; }
+
+.aspirancia .formulario div label {
+  margin-right: 20px; }
+
+.aspirancia .formulario .textarearesp {
+  width: auto;
+  height: 200px;
+  padding: 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: none;
+  margin-right: 20px; }
+
 header {
   background-color: black;
   padding: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center; }
-  header img {
+  header .logoh {
     width: 20%;
     height: 20%;
     border-radius: 20px; }
@@ -51,29 +183,558 @@ header {
           font-style: bold;
           display: flex;
           justify-content: space-evenly;
-          align-items: center; }
+          align-items: center;
+          transition-duration: 1s; }
           header div nav div div div ul li a:hover {
             background-color: #ff0000;
             border-radius: 10px;
-            color: #000000; }
-    header div nav ul li {
-      margin-right: 20px; }
-      header div nav ul li a {
-        text-decoration: none;
-        color: white;
-        font-size: 30px;
-        font-family: "Stardos Stencil", system-ui;
-        font-weight: 400;
-        font-style: bold;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center; }
-        header div nav ul li a:hover {
-          background-color: #ff0000;
-          border-radius: 10px;
-          color: #000000; }
+            color: #000000;
+            transform: translateX(50px), translateY(10px); }
+    header div .navtext ul {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: end; }
+      header div .navtext ul li {
+        margin-right: 20px; }
+        header div .navtext ul li a {
+          text-decoration: none;
+          color: white;
+          font-size: 30px;
+          font-family: "Stardos Stencil", system-ui;
+          font-weight: 400;
+          font-style: bold;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          transition-duration: 1s; }
+          header div .navtext ul li a:hover {
+            background-color: #ff0000;
+            border-radius: 10px;
+            color: #000000;
+            transform: translateY(20px); }
+  header .escudo {
+    width: 20%;
+    height: 20%;
+    border-radius: 20px; }
 
-footer {
+/*! ---------------------- INDEX --------------------------*/
+/*? ---------------------- HERO --------------------------*/
+.hero {
+  width: 100%;
+  height: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .hero h2 {
+    width: 30%;
+    color: white;
+    font-size: 45px;
+    margin-top: 40px;
+    margin-right: 20px;
+    text-align: right;
+    align-self: flex-start;
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal; }
+  .hero div iframe {
+    align-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  .hero h3 {
+    width: 30%;
+    color: white;
+    text-align: left;
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    align-self: flex-end;
+    font-family: "Special Elite", system-ui;
+    font-weight: 400;
+    font-style: normal; }
+
+/*? --------------------- DEPORTE -------------------------*/
+.nuevos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px; }
+  .nuevos .nuevosimg1 img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    padding: 10px; }
+  .nuevos div {
+    width: 40%;
+    height: auto; }
+    .nuevos div h2 {
+      color: white;
+      font-size: 60px;
+      text-align: center; }
+    .nuevos div p {
+      text-align: justify;
+      margin: 10px;
+      font-size: 25px; }
+  .nuevos .nuevosimg2 .imgduo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    padding: 10px; }
+
+/*? --------------------- CAMPOS -------------------------*/
+.campos {
+  display: flex;
+  justify-content: space-around;
+  align-content: start; }
+  .campos .campostext {
+    width: 18%;
+    height: auto;
+    border: 1px solid black;
+    background-color: #062906;
+    margin: 10px;
+    border-radius: 15px; }
+    .campos .campostext h2 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px; }
+    .campos .campostext p {
+      text-decoration: none;
+      text-align: justify;
+      padding: 15px;
+      color: white;
+      margin-bottom: 20px; }
+  .campos .camposhow {
+    width: 18%;
+    height: auto;
+    border: 1px solid black;
+    background-color: #062906;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; }
+    .campos .camposhow:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+    .campos .camposhow img {
+      width: 100%;
+      height: 240px;
+      align-items: center;
+      border-radius: 15px; }
+    .campos .camposhow h3 {
+      font-size: 25px;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+      color: #ffd000; }
+    .campos .camposhow p {
+      text-decoration: none;
+      text-align: justify;
+      padding: 15px;
+      color: white;
+      margin-bottom: 20px; }
+
+/*? ---------------------- SHOW --------------------------*/
+.show p {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  font-size: 40px;
+  padding: 30px; }
+
+.show div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 50px; }
+
+/*? ---------------------- MARKERS --------------------------*/
+.markers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px; }
+  .markers img {
+    width: 30%;
+    height: auto; }
+  .markers div h2 {
+    color: white;
+    text-align: center;
+    text-size-adjust: 35px; }
+  .markers div p {
+    text-align: justify;
+    padding: 30px; }
+
+/*! ------------------ PAGINA EQUIPO ---------------------*/
+/*? --------------------- GRILLA -------------------------*/
+.grid-cont {
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 475px 1fr;
+  grid-template-rows: auto;
+  row-gap: 5px;
+  column-gap: 5px;
+  grid-template-areas: "galeria intro" "galeria valor" "galeria elegi" "galeria video" "galeria anota";
+  /*? -------------------- GALERIA -------------------------*/
+  /*? ---------------------- INTRO --------------------------*/
+  /*? --------------------- VALORES --------------------------*/
+  /*? -------------------- ELEGINOS --------------------------*/
+  /*? --------------------- VIDEOS --------------------------*/
+  /*? --------------------- ANOTATE -------------------------*/ }
+  .grid-cont .galeria {
+    height: calc(100vh);
+    overflow-y: auto;
+    padding: 15px;
+    grid-area: galeria;
+    position: sticky;
+    top: 0; }
+    .grid-cont .galeria ul li img {
+      max-width: 100%;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .grid-cont .intro {
+    grid-area: intro;
+    justify-content: center;
+    width: 100vh;
+    margin-left: 120px; }
+    .grid-cont .intro img {
+      grid-area: logo;
+      margin: 30px;
+      max-width: 40%; }
+    .grid-cont .intro h2 {
+      grid-area: title; }
+    .grid-cont .intro p {
+      grid-area: texto;
+      padding: 20px;
+      text-align: center;
+      margin-left: 30px; }
+    .grid-cont .intro div {
+      grid-area: foto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      width: auto; }
+      .grid-cont .intro div img {
+        max-height: 400px;
+        width: auto;
+        height: 100%;
+        margin: 10px; }
+  .grid-cont .valores {
+    grid-area: valor; }
+    .grid-cont .valores p {
+      margin: 5px;
+      padding: 20px;
+      text-align: center; }
+    .grid-cont .valores div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  .grid-cont .eleginos {
+    grid-area: elegi; }
+    .grid-cont .eleginos .p1 {
+      margin: 5px;
+      padding: 20px;
+      text-align: center; }
+    .grid-cont .eleginos div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+      .grid-cont .eleginos div img {
+        width: auto;
+        height: 375px;
+        margin: 10px; }
+    .grid-cont .eleginos .p2 {
+      margin: 5px;
+      padding: 20px;
+      text-align: center; }
+  .grid-cont .videos {
+    grid-area: video; }
+    .grid-cont .videos div iframe {
+      margin: 20px; }
+    .grid-cont .videos p {
+      text-align: center;
+      margin: 10px; }
+  .grid-cont .anotate {
+    grid-area: anota; }
+    .grid-cont .anotate p {
+      margin: 5px;
+      padding: 20px;
+      text-align: center; }
+    .grid-cont .anotate div p {
+      font-family: "Special Elite", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 40px; }
+    .grid-cont .anotate a {
+      list-style-type: none;
+      padding: 0px;
+      margin: 0;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: end;
+      text-decoration: none;
+      color: white;
+      background-color: red;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: 40px;
+      font-family: "Stardos Stencil", system-ui;
+      font-weight: 400;
+      font-style: bold;
+      margin-bottom: 30px; }
+      .grid-cont .anotate a:hover {
+        background-color: #ffd000;
+        color: black;
+        border-radius: 10px;
+        padding: 10px; }
+
+/*! ----------------- PAGINA JUEGOS ---------------------*/
+/*? ------------------- JUEGOS -----------------------*/
+.ultimos-juegos {
+  justify-content: center; }
+  .ultimos-juegos .juegos {
+    width: 98%;
+    gap: 20px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #ffe600;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr;
+    grid-template-rows: auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas: "preview info side comen"; }
+    .ultimos-juegos .juegos .preview {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      max-width: 400px;
+      border-radius: 15px;
+      align-items: center; }
+      .ultimos-juegos .juegos .preview img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        border-radius: 15px; }
+      .ultimos-juegos .juegos .preview h3 {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 10px;
+        color: #ffd000; }
+    .ultimos-juegos .juegos .info {
+      grid-area: info; }
+      .ultimos-juegos .juegos .info .carousel-slide {
+        flex: 2 1 1000px;
+        max-width: 1000px;
+        height: 100%;
+        width: 100%;
+        margin-right: 50px; }
+      .ultimos-juegos .juegos .info .carousel-inner img {
+        max-height: auto;
+        max-width: auto; }
+      .ultimos-juegos .juegos .info .comentarios {
+        grid-area: comen;
+        max-height: auto; }
+        .ultimos-juegos .juegos .info .comentarios textarea {
+          width: 100%;
+          border-radius: 5px;
+          padding: 10px; }
+        .ultimos-juegos .juegos .info .comentarios label {
+          width: 100%; }
+        .ultimos-juegos .juegos .info .comentarios input {
+          width: 100%;
+          margin-top: 10px;
+          padding: 10px 15px;
+          border-radius: 5px;
+          font-family: "Russo One", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          border: none;
+          background-color: #ffd000;
+          color: white; }
+      .ultimos-juegos .juegos .info .side-content {
+        grid-area: side;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 30px; }
+        .ultimos-juegos .juegos .info .side-content iframe {
+          width: 100%;
+          border-radius: 15px; }
+        .ultimos-juegos .juegos .info .side-content a {
+          display: inline-block;
+          margin-top: 10px;
+          text-decoration: none;
+          background-color: #ffd000;
+          font-family: "Russo One", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: black;
+          padding: 10px;
+          border-radius: 5px; }
+
+/*! ----------------- PAGINA MERCADO ---------------------*/
+/*? ------------------- SHOWROOM -----------------------*/
+.show h2 {
+  text-align: center;
+  margin-bottom: 20px; }
+
+.show div {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto;
+  justify-content: center; }
+  .show div iframe {
+    max-width: 100%;
+    border: none; }
+
+.tarjetas {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; }
+  .tarjetas div {
+    width: 30%;
+    height: 700px;
+    border: 4px solid black;
+    background-color: rgba(255, 255, 255, 0.521);
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d; }
+    .tarjetas div:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); }
+    .tarjetas div img {
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 75%; }
+    .tarjetas div .stats {
+      width: 100%;
+      height: 25%;
+      border: 0px solid black;
+      margin: 0px;
+      border-radius: 15px; }
+      .tarjetas div .stats h3 {
+        font-size: 25px;
+        text-decoration: none;
+        text-align: center;
+        padding: 5px;
+        color: black; }
+      .tarjetas div .stats ul {
+        text-decoration: none;
+        text-align: center;
+        font-family: "Russo One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin-left: 30px;
+        padding: 0px;
+        color: black; }
+        .tarjetas div .stats ul li {
+          margin-bottom: 8px; }
+
+/*! ---------------- PAGINA ASPIRANCIA -------------------*/
+/*? ------------------- FORMULARIO -----------------------*/
+.aspirancia {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: "Special Elite , system-ui";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  padding: 5px; }
+  .aspirancia .formulario {
+    margin-left: 20px;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column; }
+    .aspirancia .formulario img {
+      width: 300px;
+      height: 180px;
+      align-self: center; }
+    .aspirancia .formulario form div label {
+      margin-right: 20px;
+      color: white;
+      font-family: "Special Elite , system-ui";
+      font-weight: 400;
+      font-style: normal;
+      font-size: 25px; }
+    .aspirancia .formulario form .genero {
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      width: 100px;
+      box-shadow: none;
+      border: none; }
+      .aspirancia .formulario form .genero div label {
+        margin-right: 20px; }
+    .aspirancia .formulario form .textarearesp {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      font-size: 16px;
+      box-sizing: border-box;
+      resize: none;
+      margin-right: 20px; }
+    .aspirancia .formulario form .formbot {
+      width: 200px; }
+      .aspirancia .formulario form .formbot .miimput {
+        width: 500px;
+        height: 40px;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #333;
+        border-radius: 5px;
+        background-color: white;
+        font-size: 22px;
+        color: #333;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        font-family: "Special Elite", system-ui;
+        align-items: flex-end; }
+  .aspirancia .ok h2 {
+    margin: 10px;
+    text-align: center;
+    font-size: 80px; }
+  .aspirancia .ok .okey {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    align-self: center; }
+
+.footer {
   background-color: rgba(180, 155, 10, 0.733);
   margin: 0px;
   padding: 15px;
@@ -85,11 +746,11 @@ footer {
   grid-template-columns: 1fr 2.5fr 1.2fr;
   column-gap: 10px;
   grid-template-areas: "logo parra red1" "logo parra red2"; }
-  footer img {
+  .footer .logo-footer {
     grid-area: logo;
     height: 60%;
     align-self: center; }
-  footer p {
+  .footer p {
     grid-area: parra;
     width: 100%;
     align-self: center;
@@ -97,32 +758,841 @@ footer {
     padding: 20px;
     grid-row: 1/3;
     font-size: 25px; }
-  footer div {
+  .footer .red1 {
     grid-area: red1;
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 10px; }
-    footer div a {
+    .footer .red1 .social-logo {
       width: 100%;
       max-width: 100px;
       min-width: 50px;
       margin-right: 20px; }
-    footer div h2 {
+    .footer .red1 h2 {
       width: 70%;
       font-size: 25px;
       text-align: left; }
-  footer div {
+  .footer .red2 {
     grid-area: red2;
     display: flex;
     align-items: center;
     justify-content: space-around; }
-    footer div a {
+    .footer .red2 .social-logo {
       width: 100%;
       max-width: 100px;
       min-width: 50px;
       margin-right: 20px; }
-    footer div h2 {
+    .footer .red2 h2 {
       width: 70%;
       font-size: 25px;
       text-align: left; }
+
+@media (max-width: 1650px) {
+  .grid-cont .intro {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo foto" "title foto" "texto foto"; }
+  .grid-cont.intro img {
+    align-content: start; }
+  .grid-cont.intro div {
+    display: flex;
+    flex-direction: column; }
+  .grid-cont.intro p {
+    text-align: justify; }
+  .grid-cont.intro div img {
+    max-width: 300px; }
+  .grid-cont p {
+    font-size: 25px;
+    text-align: justify; }
+  .grid-cont.eleginos {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title foto" "texto1 foto" "texto2 foto"; }
+  .grid-cont.eleginos p {
+    font-size: 25px; }
+  .grid-cont.eleginos p1 {
+    grid-area: texto1; }
+  .grid-cont.eleginos p2 {
+    grid-area: texto2; }
+  .grid-cont.eleginos h2 {
+    grid-area: title; }
+  .grid-cont .eleginos div {
+    grid-area: foto;
+    display: flex;
+    flex-direction: column; }
+  .grid-cont .eleginos img {
+    max-width: 400px;
+    width: auto; }
+  .anotate {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .anotate a {
+    margin-bottom: 30px; } }
+
+@media (max-width: 1550px) {
+  .nuevos h2 {
+    font-size: 55px; }
+  .nuevos div p {
+    font-size: 22px; }
+  .ultimos-juegos .juegos {
+    display: grid;
+    grid-template-columns: 1fr, 1.5fr, 1fr, 1fr;
+    row-gap: 10px;
+    column-gap: 15px;
+    grid-template-areas: "preview info side comen"; }
+  .ultimos-juegos .juegos .comenarios p {
+    font-size: 22px; }
+  .comenarios textarea {
+    columns: 40; } }
+
+@media (max-width: 1510px) {
+  .hero iframe,
+  .show iframe {
+    width: 700px;
+    height: 395px; }
+  .hero h2 {
+    width: 25%;
+    color: white;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-right: 20px;
+    align-items: start; }
+  .hero h3 {
+    width: 25%;
+    color: white;
+    font-size: 35px;
+    align-items: center;
+    margin-right: 20px; }
+  .nuevos {
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .nuevos h2 {
+    font-size: 50px; }
+  .nuevos p {
+    font-size: 22px; }
+  .nuevos .nuevosimg1 .nuevosimg2 {
+    width: 30%;
+    height: auto; }
+  .campos p {
+    font-size: 23px; }
+  .markerwall {
+    display: none; }
+  .markers img {
+    width: 40%;
+    height: auto; }
+  .show div iframe {
+    margin: 5px; }
+  .aspirancia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px; }
+  .aspirancia .formulario {
+    align-self: center; }
+  .aspirancia .formulario img {
+    margin-top: 30px;
+    width: 70%;
+    height: auto; }
+  .aspirancia .formulario .miimput {
+    align-items: end;
+    width: 700px; }
+  .aspirancia .okey {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px; }
+  .aspirancia .formulario .genero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; } }
+
+@media (max-width: 1470px) {
+  .ultimos-juegos .juegos {
+    align-items: center;
+    padding: 30px;
+    margin-right: 3%;
+    margin-left: 3%;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "preview  comen  " " side info  "; }
+  .ultimos-juegos .juegos .preview {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center; }
+  .ultimos-juegos .juegos .info .carousel-slide {
+    max-width: 700px;
+    height: 100%;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0px; } }
+
+@media (max-width: 1350px) {
+  .nuevosimg1 {
+    display: none; }
+  .nuevos p {
+    width: 100%;
+    text-align: justify;
+    margin: 10px;
+    font-size: 25px; }
+  .nuevos img {
+    width: 70%;
+    height: auto; }
+  .hero h2 {
+    width: 30%;
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+    margin-right: 20px;
+    align-items: start; }
+  .hero h3 {
+    width: 25%;
+    color: white;
+    font-size: 30px;
+    align-items: center;
+    margin-right: 20px; }
+  .campos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "titulo titulo titulo titulo" "campo campo campo campo"; }
+  .campos div {
+    width: 95%; }
+  .camposshow {
+    grid-area: campo; }
+  .campostext {
+    grid-area: titulo;
+    display: flex;
+    justify-content: center; }
+  .campostext h2 {
+    width: 30%; }
+  .markers p {
+    font-size: 23px; }
+  .markers h2 {
+    font-size: 45px; }
+  .footer p {
+    font-size: 22px; }
+  .footer div p {
+    font-size: 20px; }
+  .tarjetas {
+    flex-wrap: wrap;
+    flex-direction: column; }
+  .tarjetas div {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .tarjetas div .stats {
+    display: flex;
+    flex-direction: column;
+    background-color: none; }
+  .tarjetas div img {
+    width: 60%; }
+  .show div {
+    display: flex;
+    flex-direction: column; }
+  .show div iframe {
+    margin: 5px; }
+  .show h2 {
+    text-align: center; }
+  .grid-cont.eleginos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .grid-cont.eleginos div {
+    flex-direction: row; }
+  .grid-cont.eleginos div img {
+    width: 90%;
+    height: auto; }
+  .grid-cont .eleginos div li .viaje {
+    display: none; } }
+
+@media (max-width: 1250px) {
+  .grid-cont {
+    grid-template-columns: 350px 1fr; }
+  .grid-cont p {
+    width: 80%; }
+  .grid-cont .intro {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title logo" "texto texto" "foto foto"; }
+  .grid-cont .intro div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; }
+  .grid-cont.intro img {
+    min-width: 200px; }
+  .grid-cont .intro div img {
+    max-height: 300px; }
+  .grid-cont .intro div .forza {
+    display: none; }
+  .grid-cont .videos div {
+    width: 90%;
+    padding-right: 10px; }
+  .grid-cont .anotate div {
+    margin-left: 10%; } }
+
+@media (max-width: 1200px) {
+  .campos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "titulo titulo" "campo campo" "campo campo"; }
+  .camposshow {
+    grid-area: campo; }
+  .camposshow img {
+    height: auto; }
+  .campostext {
+    grid-area: titulo;
+    justify-content: center; }
+  .show div {
+    display: flex;
+    flex-direction: column; }
+  .footer {
+    grid-template-areas: "logo parra parra" "logo red1 red2"; }
+  .footer p {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    grid-row: 1/2; } }
+
+@media (max-width: 1105px) {
+  header div .navtext ul li a {
+    font-size: 25px; }
+  .hero {
+    flex-direction: column; }
+  .hero h2 {
+    width: 65%;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+    align-self: center; }
+  .hero h3 {
+    width: 65%;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 100px;
+    align-self: center; }
+  .hero iframe {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  .nuevos {
+    display: flex;
+    flex-direction: column; }
+  .nuevos div {
+    width: 100%; }
+  .nuevosimg2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between; }
+  .nuevosimg2 .imgduo {
+    width: 45%;
+    height: auto; }
+  .show {
+    font-size: 40px; }
+  .markers {
+    flex-direction: column; }
+  .markers img {
+    width: 60%;
+    height: auto; }
+  .markers p {
+    padding: 30px; }
+  .ultimos-juegos .juegos {
+    align-items: center;
+    padding: 30px;
+    padding-left: 5%;
+    padding-right: 5%; }
+  .aspirancia .ok .okey {
+    margin: 0px; } }
+
+@media (max-width: 980px) {
+  header div h1 {
+    font-size: 60px;
+    margin-bottom: 15px; }
+  .grid-cont p {
+    width: 90%; }
+  .show {
+    font-size: 35px; }
+  .aspirancia {
+    font-size: 25px; }
+  .aspirancia .formulario .miimput {
+    align-items: end;
+    width: 400px; }
+  .aspirancia .okey {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%; }
+  .grid-cont .valores div iframe {
+    width: 400px;
+    height: 250px; } }
+
+@media (max-width: 950px) {
+  header div .navtext ul li a {
+    font-size: 20px; }
+  .grid-cont .eleginos div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center; } }
+
+@media (max-width: 920px) {
+  .grid-cont .intro div img {
+    width: 275px; } }
+
+@media (max-width: 900px) {
+  .footer p {
+    font-size: 20px; }
+  .footer .red1 h2 {
+    font-size: 18px; }
+  .footer .red2 h2 {
+    font-size: 18px; }
+  .grid-cont p {
+    margin: 0px;
+    padding: 10px;
+    font-size: 22px; } }
+
+@media (max-width: 840px) {
+  header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "titulo escudo" "nav escudo"; }
+  header div h1 {
+    grid-area: titulo;
+    width: 100%; }
+  header .logoh {
+    display: none; }
+  header .escudo {
+    grid-area: escudo;
+    width: auto;
+    height: 200px;
+    margin-bottom: 0px;
+    margin-top: 10px; }
+  header div {
+    grid-area: nav;
+    background-color: #000000;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .footer {
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-areas: "parra parra" "logo red1" "logo red2"; }
+  .footer p {
+    font-size: 20px;
+    grid-row: 1/2;
+    margin-bottom: 0px; }
+  .footer .red1 h2 {
+    font-size: 20px; }
+  .footer .red2 h2 {
+    font-size: 20px; }
+  .footer .logo-footer {
+    grid-row: 2/4; }
+  .footer .red1 {
+    justify-content: center; }
+  .footer .red2 {
+    justify-content: center; }
+  .grid-cont {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; }
+  .grid-cont .galeria {
+    width: 105% !important;
+    height: 200px;
+    align-items: center;
+    border: 2px solid #ccc;
+    padding: 0px;
+    top: 50px;
+    overflow-x: auto;
+    white-space: nowrap; }
+  .grid-cont .galeria ul {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100% !important;
+    padding: 5px;
+    margin: 0px;
+    list-style-type: none; }
+  .grid-cont .galeria ul li {
+    flex: 0 0 auto;
+    margin-right: 5px; }
+  .grid-cont .galeria ul li img {
+    height: 200px;
+    width: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #2b2a29;
+    margin-right: 10px;
+    border-color: #000000; }
+  .ultimos-juegos .juegos {
+    align-items: center;
+    padding: 20px;
+    margin-right: 0px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%; }
+  .ultimos-juegos .juegos .info .carousel-slide {
+    flex: 2 1 1000px;
+    max-width: 1000px;
+    height: auto;
+    width: 500px;
+    margin-right: 0px; }
+  .ultimos-juegos .juegos .side-content {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0px; } }
+
+@media (max-width: 820px) {
+  .grid-cont .galeria ul {
+    max-width: 100%;
+    width: 100%; }
+  .grid-cont .galeria ul {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0;
+    margin: 0; } }
+
+@media (max-width: 768px) {
+  header div h1 {
+    font-size: 50px;
+    margin-bottom: 10px; }
+  header img .escudo {
+    grid-area: escudo;
+    width: auto;
+    height: 150px; }
+  .hero div {
+    width: 100%;
+    height: auto; }
+  .hero iframe {
+    width: 100%; }
+  .hero h2 {
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    align-self: center; }
+  .hero h3 {
+    width: 80%;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 100px;
+    align-self: center; }
+  .nuevosimg2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center; }
+  .nuevosimg2 .imgduo {
+    width: 80%;
+    height: auto;
+    margin: 0px; }
+  .campos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%; }
+  .campostext {
+    display: flex;
+    flex-direction: column; }
+  .campostext h2 {
+    width: 100%; }
+  .show div {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+  .show iframe {
+    width: 95%;
+    margin: 0px;
+    margin-top: 5px; }
+  .show p {
+    font-size: 30px;
+    text-align: justify; } }
+
+@media (max-width: 640px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header img.escudo {
+    height: 130px;
+    margin-top: 20px;
+    align-self: last baseline; }
+  .campos {
+    margin-left: 10px;
+    margin-right: 10px; }
+  header div h1 {
+    margin-bottom: 0px; }
+  header {
+    grid-template-columns: 2fr 1fr; }
+  header div .navtext {
+    display: none; }
+  header div .navtext ul li a {
+    color: white;
+    font-size: 20px; }
+  .tarjetas div {
+    width: 70%;
+    height: 100%;
+    flex-direction: column; }
+  .tarjetas div img {
+    width: 100%; } }
+
+@media (max-width: 590px) {
+  header div h1 {
+    font-size: 40px; }
+  header img.escudo {
+    height: 130px;
+    align-self: last baseline;
+    padding: 10px; }
+  .footer {
+    height: 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "parra parra parra" "logo red1 red2"; }
+  .footer .logo-footer {
+    grid-row: 2/3;
+    margin: 0px;
+    width: auto;
+    height: 100px;
+    justify-content: center;
+    align-items: center; }
+  .footer p {
+    font-size: 18px;
+    margin: 0px;
+    padding: 5px; }
+  .red1,
+  .red2 {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center; }
+  footer .red1 .social-logo {
+    width: 100%;
+    max-width: 70px;
+    min-width: 30px;
+    margin-right: 20px; }
+  footer .red2 .social-logo {
+    width: 100%;
+    max-width: 70px;
+    min-width: 30px;
+    margin-right: 20px; }
+  .footer .red1 h2 {
+    font-size: 18px; }
+  .footer .red2 h2 {
+    font-size: 18px; }
+  .aspirancia {
+    font-size: 20px; }
+  .aspirancia .formulario form .miimput {
+    align-items: end;
+    width: 350px; }
+  .aspirancia .formulario form .formbot .miimput {
+    align-items: end;
+    width: 350px; }
+  .aspirancia .ok .okey {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%; }
+  .show iframe {
+    width: 100%;
+    height: 300px;
+    margin: 0px;
+    margin-top: 5px; }
+  .ultimos-juegos .juegos .info .carousel-slide {
+    height: auto;
+    width: 400px; }
+  .ultimos-juegos .juegos .comenarios p {
+    font-size: 20px; }
+  .ultimos-juegos h2 {
+    font-size: 48px;
+    align-self: center; }
+  .grid-cont .anotate div p {
+    font-size: 30px; } }
+
+@media (max-width: 500px) {
+  header div h1 {
+    font-size: 38px; }
+  .hero h2 {
+    font-size: 30px; }
+  .hero h3 {
+    font-size: 30px; }
+  .nuevos div h2 {
+    font-size: 45px; }
+  .nuevos div p {
+    font-size: 20px; }
+  .grid-cont .intro {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .grid-cont h2 {
+    align-self: center; }
+  .campostext p {
+    font-size: 20px; }
+  .camposhow p {
+    font-size: 20px; }
+  .show p {
+    font-size: 25px; }
+  .markers div h2 {
+    font-size: 45px; }
+  .markers div p {
+    font-size: 20px; }
+  .show p {
+    font-size: 20px; }
+  footer .red1 .social-logo {
+    width: 100%;
+    max-width: 70px;
+    min-width: 10px;
+    margin-right: 15px; }
+  footer .red2 .social-logo {
+    width: 100%;
+    max-width: 70px;
+    min-width: 10px;
+    margin-right: 15px; }
+  .footer .red1 h2 {
+    font-size: 16px; }
+  .footer .red2 h2 {
+    font-size: 16px; }
+  .footer p {
+    font-size: 15px;
+    margin: 0px;
+    padding: 5px; }
+  .aspirancia {
+    font-size: 20px; }
+  .aspirancia .formulario form .miimput {
+    align-items: end;
+    width: 350px; }
+  .aspirancia .formulario form .formbot .miimput {
+    align-items: end;
+    width: 350px; }
+  .aspirancia .ok .okey {
+    margin-bottom: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 95%; }
+  .aspirancia .ok h2 {
+    font-size: 50px; }
+  .aspirancia .miimput {
+    display: flex;
+    flex-direction: column; }
+  .show h2 {
+    font-size: 40px; }
+  .ultimos-juegos h2 {
+    font-size: 40px;
+    align-self: center; }
+  .grid-cont .anotate a {
+    font-size: 32px; } }
+
+@media (max-width: 450px) {
+  .nuevos div p {
+    font-size: 18px; }
+  .nuevos div h2 {
+    font-size: 40px; }
+  .nuevosimg2 .imgduo {
+    width: 100%;
+    height: auto; }
+  .campostext p {
+    font-size: 18px; }
+  .camposhow p {
+    font-size: 18px; }
+  .show p {
+    font-size: 22px; }
+  .markers div h2 {
+    font-size: 40px; }
+  .markers div p {
+    font-size: 18px; }
+  .footer .logo-footer {
+    grid-row: 2/4; }
+  .footer .red1 {
+    margin-right: 5px; }
+  .footer .red2 {
+    margin-right: 5px; }
+  .footer .red1 h2 {
+    font-size: 15px; }
+  .footer .red2 h2 {
+    font-size: 15px; }
+  .footer {
+    height: 350px;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-areas: "parra parra" "logo red1" "logo red2"; }
+  .show iframe {
+    height: 200px; }
+  .ultimos-juegos .juegos {
+    align-items: center;
+    padding: 10px;
+    margin-right: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%; }
+  .ultimos-juegos .juegos .info .carousel-slide {
+    height: auto;
+    width: 330px; }
+  .ultimos-juegos .juegos .comenarios p {
+    font-size: 18px; }
+  .grid-cont .anotate div p {
+    font-size: 25px; } }
+
+@media (max-width: 425px) {
+  .ultimos-juegos h2 {
+    font-size: 35px;
+    align-self: center;
+    text-align: center; }
+  .grid-cont .valores div iframe {
+    width: 345px; }
+  footer .red1 .social-logo {
+    width: 80%;
+    height: 70px;
+    max-width: 50px;
+    min-width: 5px;
+    margin-right: 15px;
+    margin-bottom: 3px; }
+  footer .red2 .social-logo {
+    width: 80%;
+    height: 70px;
+    max-width: 50px;
+    min-width: 5px;
+    margin-right: 15px;
+    margin-bottom: 3px; } }
+
+@media (max-width: 400px) {
+  .aspirancia .formulario form .miimput {
+    align-items: end;
+    width: 290px; }
+  .aspirancia .formulario form .formbot .miimput {
+    align-items: end;
+    width: 290px; }
+  .aspirancia .formulario .textarearesp {
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
+    resize: none; }
+  .show h2 {
+    font-size: 33px; }
+  .grid-cont .anotate a {
+    font-size: 28px; } }

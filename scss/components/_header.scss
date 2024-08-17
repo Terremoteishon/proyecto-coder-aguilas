@@ -4,7 +4,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    img {
+    .logoh {
         width: 20%;
         height: 20%;
         border-radius: 20px;
@@ -26,9 +26,7 @@ header {
         }
         nav {
             div {
-                button {
-
-                }
+                button {}
                 div {
                     div {
                         h5 {
@@ -60,10 +58,13 @@ header {
                                     display: flex;
                                     justify-content: space-evenly;
                                     align-items: center;
+                                    transition-duration: 1s;
                                     &:hover {
                                         background-color: #ff0000;
                                         border-radius: 10px;
                                         color: #000000;
+                                        transform: translateX(50px), translateY(10px);
+                                        
                                     }
                                 }
                             }
@@ -72,8 +73,14 @@ header {
                 }
             }
         }
-        nav {
+        .navtext {
             ul {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: end;
                 li {
                     margin-right: 20px;
 
@@ -87,15 +94,19 @@ header {
                         display: flex;
                         justify-content: space-evenly;
                         align-items: center;
+                        transition-duration: 1s;
                         &:hover {
                             background-color: #ff0000;
                             border-radius: 10px;
                             color: #000000;
+                            transform: translateY(20px);
                         }
                     }
                 }
             }
         }
     }
-    img {}
+    .escudo {width: 20%;
+        height: 20%;
+        border-radius: 20px;}
 }

@@ -279,8 +279,6 @@ main h3 {
   margin-bottom: 20px;
 }
 
-/* --------------------------HACER QUE LA PROPIA FOTITO SEA BOTONCITO --------------------*/
-
 .campos div img {
   width: 100%;
   height: 240px;
@@ -572,7 +570,7 @@ main h3 {
 .anotate a {
   list-style-type: none;
   padding: 0px;
-  margin: 0;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: end;
@@ -1609,7 +1607,7 @@ main h3 {
   }
 
   .galeria {
-    width: 93vh;
+    width: 105% !important;
     height: 200px;
     align-items: center;
     border: 2px solid #ccc;
@@ -1626,7 +1624,7 @@ main h3 {
     overflow-x: auto;
     box-sizing: border-box;
     max-width: 100%;
-    width: 100%;
+    width: 100% !important;
     padding: 5px;
     margin: 0px;
     list-style-type: none;

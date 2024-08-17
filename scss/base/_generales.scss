@@ -4,6 +4,57 @@
     box-sizing: border-box;
 }
 
+//! Variables
+$color-principal: #ffd000;
+$color-logo: #ffd000;
+$color-resaltar: red;
+$color-texto: white;
+
+//! Lista
+$colores-tarjetas: black, rgb(6, 41, 6), rgba(255, 255, 255, 0.521);
+$colores-background: black, rgba(180, 155, 10, 0.733);
+$font-size: 60px, 40px, 50px, 30px, 25px, 18px, 16px;
+
+//! Extend
+%flex-colum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%boton {
+    background-color: $color-principal;
+    color: black;
+    border-radius: 5px;
+    border: 2px, solid black;
+}
+
+//! Mixin
+@mixin flex ($flex, $justify, $align) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//! Mapas
+$enlace: (
+    text-deco: none,
+    bg-color: #ffd000,
+    font-fam: "Russo One, sans-serif",
+    font-style: normal
+);
+
+$un-input: (
+    borde-caja: 2px solid #333,
+    b-radio: 5px,
+    bg-color: #f9f9f9,
+    font-s: 22px,
+    color: #333,
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
+    font-family: "Special Elite, system-ui",
+);
+
+
 main {
     background-image: url(../img/logo-fondo.jpg);
     background-position: center;
@@ -43,55 +94,116 @@ main h3 {
     padding: 5px;
 }
 
-//! Variables
-$color-principal: #ffd000;
-$color-logo: #ffd000;
-$color-resaltar: red;
-$color-texto: white;
+.navbar-custom {
+    font-size: 30px;
+    background-color: #ffd000;
 
-//! Lista
-$colores-tarjetas: black, rgb(6, 41, 6), rgba(255, 255, 255, 0.521);
-$colores-background: black, rgba(180, 155, 10, 0.733);
-$font-size: 60px, 40px, 50px, 30px, 25px, 18px, 16px;
+}
 
-//! Mapas
-$enlace: (
-    text-deco: none,
-    bg-color: #ffd000,
-    font-fam: "Russo One",
-    sans-serif,
-    font-style: normal,
-);
+.navbar-custom h5 {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    ;
+}
 
-$un-input: (
-    borde-caja: 2px solid #333,
-    b-radio: 5px,
-    bg-color: #f9f9f9,
-    font-s: 22px,
-    color: #333,
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1),
-    font-family: "Special Elite",
-    system-ui,
-);
+.offcanvas-end {
+    background-color: #000000;
+}
 
-//! Extend
-%flex-colum {
+.navbar-custom .nav-link,
+.offcanvas-end .nav-link,
+.offcanvas-end .nav-item {
+    color: #ffd000;
+}
+
+.navbar-custom .nav-link:hover,
+.offcanvas-end .nav-link:hover {
+    color: #000000;
+}
+
+.offcanvas-header {
+    background-color: #ffd000;
+    color: #ffd000;
+}
+
+.navbar-custom .custom-toggler {
+    border-color: #000000;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.nav-item {
+    transform: 1s;
+}
+
+.offcanvas-body {
+    transform: 1s;
+}
+
+.nav-item a:hover {
+    background-color: #ff0000;
+    border-radius: 10px;
+    color: #000000;
+    transform: translateX(-30px);
+}
+
+.formulario {
+    margin-left: 20px;
     display: flex;
+    align-self: flex-end;
     flex-direction: column;
-    align-items: center;
-}
-
-%boton{
-    background-color: $color-principal;
-    color: black;
+  }
+  
+  .formulario .miimput {
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #333;
     border-radius: 5px;
-    border: 2px, solid black;
-}
-
-//! Mixin
-@mixin flex ($flex, $justify, $align){
-display: $flex;
-justify-content: $justify;
-align-items: $align;
-}
-
+    background-color: #f9f9f9;
+    font-size: 22px;
+    color: #333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Special Elite", system-ui;
+    align-items: flex-end;
+  }
+  
+  .formulario .genero {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 100px;
+    box-shadow: none;
+    border: none;
+  }
+  
+  .formulario img {
+    width: 300px;
+    height: 180px;
+    align-self: center;
+  }
+  
+  .formulario .formbot {
+    width: 200px;
+  }
+  
+  .aspirancia .formulario div label {
+    margin-right: 20px;
+  }
+  
+  .aspirancia .formulario .textarearesp {
+    width: auto;
+    height: 200px;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;
+    margin-right: 20px;
+  }
+  

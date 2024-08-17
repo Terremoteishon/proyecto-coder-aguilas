@@ -1,3 +1,5 @@
+/*! ---------------------- INDEX --------------------------*/
+/*? ---------------------- HERO --------------------------*/
 .hero {
     width: 100%;
     height: auto;
@@ -39,14 +41,12 @@
     }
 }
 
+/*? --------------------- DEPORTE -------------------------*/
 .nuevos {
     @include flex (flex, space-between, center);
     margin: 50px;
 
-    div {
-        width: 40%;
-        height: auto;
-
+    .nuevosimg1 {
         img {
             width: 100%;
             height: auto;
@@ -60,6 +60,9 @@
     }
 
     div {
+        width: 40%;
+        height: auto;
+
         h2 {
             color: $color-texto;
             font-size: 60px;
@@ -74,8 +77,8 @@
 
     }
 
-    div {
-        img {
+    .nuevosimg2 {
+        .imgduo {
             width: 100%;
             height: auto;
             display: flex;
@@ -86,126 +89,152 @@
         }
 
     }
+}
 
-    .camposdiv {
-        display: flex;
-        justify-content: space-around;
-        align-content: start;
-        align-items: center;
+/*? --------------------- CAMPOS -------------------------*/
+.campos {
+    display: flex;
+    justify-content: space-around;
+    align-content: start;
 
-        .campostextdiv {
-            h2 {
-                font-size: 40px;
-                text-align: center;
-                margin-bottom: 20px;
-            }
+    .campostext {
+        width: 18%;
+        height: auto;
+        border: 1px solid black;
+        background-color: rgb(6, 41, 6);
+        margin: 10px;
+        border-radius: 15px;
 
-            p {
-                text-decoration: none;
-                text-align: justify;
-                padding: 15px;
-                color: $color-texto;
-                margin-bottom: 20px;
-            }
-        }
-
-        .camposhow {
-            img {
-                width: 100%;
-                height: 240px;
-                align-items: center;
-                border-radius: 15px;
-            }
-
-            h3 {
-                font-size: 25px;
-                text-decoration: none;
-                text-align: center;
-                padding: 10px;
-                color: $color-logo;
-            }
-
-            p {
-                text-decoration: none;
-                text-align: justify;
-                padding: 15px;
-                color: $color-texto;
-                margin-bottom: 20px;
-            }
-
-        }
-    }
-
-    .show {
-        p {
-            font-family: "Special Elite", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            text-align: center;
-            margin-bottom: 30px;
-            margin-top: 30px;
+        h2 {
             font-size: 40px;
-            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
-        div {
-            @include flex (flex, space-between, center);
-            padding-bottom: 50px;
-
+        p {
+            text-decoration: none;
+            text-align: justify;
+            padding: 15px;
+            color: $color-texto;
+            margin-bottom: 20px;
         }
-
-
     }
 
-    .markers {
-        @include flex (flex, space-between, center);
-        padding-bottom: 30px;
+    .camposhow {
+        width: 18%;
+        height: auto;
+        border: 1px solid black;
+        background-color: rgb(6, 41, 6);
+        margin: 10px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        transform-style: preserve-3d;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
         img {
-            width: 30%;
-            height: auto;
+            width: 100%;
+            height: 240px;
+            align-items: center;
+            border-radius: 15px;
         }
 
-        div {
-            h2 {
-                color: $color-texto;
-                text-align: center;
-                text-size-adjust: 35px;
-            }
+        h3 {
+            font-size: 25px;
+            text-decoration: none;
+            text-align: center;
+            padding: 10px;
+            color: $color-logo;
+        }
 
-            p {
-                text-align: justify;
-                padding: 30px;
-            }
+        p {
+            text-decoration: none;
+            text-align: justify;
+            padding: 15px;
+            color: $color-texto;
+            margin-bottom: 20px;
         }
 
     }
+}
 
-    .grid-cont {
-        margin: 0px auto;
-        display: grid;
-        /*grid-template-columns:2fr, repeat(3, 1fr) ;
-        grid-template-rows: repeat(5, 500px) ;*/
-        grid-template-columns: 500px 1fr 1fr 1fr;
-        grid-template-rows: 1150px 700px 1150px 900px 1000px;
-        row-gap: 10px;
-        column-gap: 15px;
-        /* ----------- GRID AREAS -----------*/
-        grid-template-areas:
-            "galeria intro intro intro"
-            "galeria valor valor valor"
-            "galeria elegi elegi elegi"
-            "galeria video video video"
-            "galeria anota anota anota"
-        ;
+/*? ---------------------- SHOW --------------------------*/
+.show {
+    p {
+        font-family: "Special Elite", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        font-size: 40px;
+        padding: 30px;
     }
 
+    div {
+        @include flex (flex, space-between, center);
+        padding-bottom: 50px;
+
+    }
+
+
+}
+
+/*? ---------------------- MARKERS --------------------------*/
+.markers {
+    @include flex (flex, space-between, center);
+    padding-bottom: 30px;
+
+    img {
+        width: 30%;
+        height: auto;
+    }
+
+    div {
+        h2 {
+            color: $color-texto;
+            text-align: center;
+            text-size-adjust: 35px;
+        }
+
+        p {
+            text-align: justify;
+            padding: 30px;
+        }
+    }
+
+}
+
+/*! ------------------ PAGINA EQUIPO ---------------------*/
+/*? --------------------- GRILLA -------------------------*/
+.grid-cont {
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 475px 1fr;
+    grid-template-rows: auto;
+    row-gap: 5px;
+    column-gap: 5px;
+    grid-template-areas:
+        "galeria intro"
+        "galeria valor"
+        "galeria elegi"
+        "galeria video"
+        "galeria anota"
+    ;
+
+    /*? -------------------- GALERIA -------------------------*/
     .galeria {
         @extend %flex-colum;
-        overflow-y: scroll;
-        border: 2px solid #ccc;
+        height: calc(100vh);
+        overflow-y: auto;
         padding: 15px;
         grid-area: galeria;
+        position: sticky;
+        top: 0;
 
         ul {
             li {
@@ -219,30 +248,49 @@
         }
     }
 
+    /*? ---------------------- INTRO --------------------------*/
     .intro {
         grid-area: intro;
         @extend %flex-colum;
-        margin-top: 30px;
+        justify-content: center;
+        width: 100vh;
+        margin-left: 120px;
+
+        img {
+            grid-area: logo;
+            margin: 30px;
+            max-width: 40%;
+        }
+
+        h2 {
+            grid-area: title;
+        }
 
         p {
+            grid-area: texto;
             padding: 20px;
             text-align: center;
+            margin-left: 30px;
         }
 
         div {
+            grid-area: foto;
             @include flex (flex, space-between, center);
             margin-bottom: 10px;
             border-radius: 8px;
+            width: auto;
 
             img {
+                max-height: 400px;
                 width: auto;
-                height: 400px;
+                height: 100%;
                 margin: 10px;
             }
         }
 
     }
 
+    /*? --------------------- VALORES --------------------------*/
     .valores {
         grid-area: valor;
         @extend %flex-colum;
@@ -263,11 +311,12 @@
         }
     }
 
+    /*? -------------------- ELEGINOS --------------------------*/
     .eleginos {
         grid-area: elegi;
         @extend %flex-colum;
 
-        p {
+        .p1 {
             margin: 5px;
             padding: 20px;
             text-align: center;
@@ -286,8 +335,15 @@
             }
         }
 
+        .p2 {
+            margin: 5px;
+            padding: 20px;
+            text-align: center;
+        }
+
     }
 
+    /*? --------------------- VIDEOS --------------------------*/
     .videos {
         grid-area: video;
         @extend %flex-colum;
@@ -305,6 +361,7 @@
 
     }
 
+    /*? --------------------- ANOTATE -------------------------*/
     .anotate {
         grid-area: anota;
         @extend %flex-colum;
@@ -342,6 +399,7 @@
             font-family: "Stardos Stencil", system-ui;
             font-weight: 400;
             font-style: bold;
+            margin-bottom: 30px;
 
             &:hover {
                 background-color: $color-principal;
@@ -353,250 +411,325 @@
         }
 
     }
+}
 
-    .ultimos-juegos {
+/*! ----------------- PAGINA JUEGOS ---------------------*/
+/*? ------------------- JUEGOS -----------------------*/
 
-        .juegos {
+.ultimos-juegos {
+    @extend %flex-colum;
+    justify-content: center;
+
+    .juegos {
+        width: 98%;
+        gap: 20px;
+        margin: 20px;
+        padding: 10px;
+        border: 2px solid #ffe600;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr 1fr;
+        grid-template-rows: auto;
+        row-gap: 10px;
+        column-gap: 10px;
+        grid-template-areas:
+            "preview info side comen"
+        ;
+
+        .preview {
             width: 100%;
-            gap: 20px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-            padding: 10px;
-            border: 2px solid #ffe600;
+            height: auto;
+            max-height: 300px;
+            max-width: 400px;
             border-radius: 15px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: $color-texto;
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr 1fr;
-            grid-template-rows: auto;
-            row-gap: 10px;
-            column-gap: 10px;
-            grid-template-areas:
-                "preview info side comen"
-            ;
+            align-items: center;
 
-            .preview {
-                flex: 1 1 300px;
-                margin-right: 20px;
-                grid-area: preview;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                    max-width: 400px;
-                    border-radius: 15px;
-                }
-
-                h3 {
-                    text-align: center;
-                    font-size: 40px;
-                    margin-top: 10px;
-                    color: $color-logo;
-                }
+            img {
+                width: 100%;
+                height: auto;
+                max-width: 400px;
+                border-radius: 15px;
             }
 
-            .info {
-                div {
-                    carrusel button {}
-                }
-
-                .carousel-slide {
-                    grid-area: info;
-                    flex: 2 1 600px;
-                    max-width: 600px;
-                    margin-right: 20px;
-                }
-
-                .carousel-inner img {
-                    max-height: auto;
-                }
-
-
-                .comentarios {
-                    grid-area: comen;
-
-                    textarea {
-                        width: 100%;
-                        border-radius: 5px;
-                        padding: 10px;
-                    }
-
-                    input {
-                        margin-top: 10px;
-                        padding: 10px 15px;
-                        border-radius: 5px;
-                        font-family: "Russo One", sans-serif;
-                        font-weight: 400;
-                        font-style: normal;
-                        border: none;
-                        background-color: $color-principal;
-                        color: $color-texto;
-                    }
-
-                }
-
-                .side-content {
-                    grid-area: side;
-                    flex: 1 1 300px;
-                    max-width: 300px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-
-                    iframe {
-                        width: 100%;
-                        border-radius: 15px;
-                    }
-
-                    a {
-                        display: inline-block;
-                        margin-top: 10px;
-                        text-decoration: none;
-                        background-color: $color-principal;
-                        font-family: "Russo One", sans-serif;
-                        font-weight: 400;
-                        font-style: normal;
-                        color: rgb(0, 0, 0);
-                        padding: 10px;
-                        border-radius: 5px;
-                    }
-                }
+            h3 {
+                text-align: center;
+                font-size: 40px;
+                margin-top: 10px;
+                color: $color-logo;
             }
         }
 
-        .tarjetas {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
+        .info {
+            grid-area: info;
 
             div {
-                width: 30%;
-                height: 550px;
-                border: 4px solid black;
-                background-color: rgba(255, 255, 255, 0.521);
-                margin: 20px;
+                carrusel button {}
+            }
+
+            .carousel-slide {
+                flex: 2 1 1000px;
+                max-width: 1000px;
+                height: 100%;
+                width: 100%;
+                margin-right: 50px;
+            }
+
+            .carousel-inner img {
+                max-height: auto;
+                max-width: auto;
+            }
+
+
+            .comentarios {
+                grid-area: comen;
+                max-height: auto;
+
+                textarea {
+                    width: 100%;
+                    border-radius: 5px;
+                    padding: 10px;
+                }
+
+                label {
+                    width: 100%;
+                }
+
+                input {
+                    width: 100%;
+                    margin-top: 10px;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    font-family: "Russo One", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    border: none;
+                    background-color: $color-principal;
+                    color: $color-texto;
+                }
+
+            }
+
+            .side-content {
+                grid-area: side;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-left: 30px;
+
+                iframe {
+                    width: 100%;
+                    border-radius: 15px;
+                }
+
+                a {
+                    display: inline-block;
+                    margin-top: 10px;
+                    text-decoration: none;
+                    background-color: $color-principal;
+                    font-family: "Russo One", sans-serif;
+                    font-weight: 400;
+                    font-style: normal;
+                    color: rgb(0, 0, 0);
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+
+/*! ----------------- PAGINA MERCADO ---------------------*/
+/*? ------------------- SHOWROOM -----------------------*/
+
+    .show {
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            overflow-x: auto;
+            justify-content: center;
+
+            iframe {
+                max-width: 100%;
+                border: none;
+            }
+        }
+    }
+
+    .tarjetas {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        div {
+            width: 30%;
+            height: 700px;
+            border: 4px solid black;
+            background-color: rgba(255, 255, 255, 0.521);
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        transform-style: preserve-3d;
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+            img {
+                width: 100%;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                height: 75%;
+            }
+
+            .stats {
+                width: 100%;
+                height: 25%;
+                border: 0px solid black;
+                margin: 0px;
                 border-radius: 15px;
 
-                img {
-                    width: 100%;
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
-                    height: 75%;
-                }
 
                 h3 {
                     font-size: 25px;
                     text-decoration: none;
                     text-align: center;
-                    padding: 10px;
+                    padding: 5px;
                     color: rgb(0, 0, 0);
                 }
 
-                ol {
+                ul {
                     text-decoration: none;
-                    text-align: left;
+                    text-align: center;
                     font-family: "Russo One", sans-serif;
                     font-weight: 400;
                     font-style: normal;
-                    padding: 30px;
+                    margin-left: 30px;
+                    padding: 0px;
                     color: rgb(0, 0, 0);
 
+                    li {
+                        margin-bottom: 8px;
+                    }
                 }
             }
         }
+    }
 
-        .aspirancia {
-            @include flex (flex, space-between, center);
-            color: $color-texto;
-            font-family: "Special Elite", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            font-size: 25px;
-            padding: 5px;
 
-            .formulario {
-                margin-left: 20px;
-                display: flex;
-                align-self: flex-end;
-                flex-direction: column;
 
-                img {
-                    width: 300px;
-                    height: 180px;
-                    align-self: center;
+
+/*! ---------------- PAGINA ASPIRANCIA -------------------*/
+/*? ------------------- FORMULARIO -----------------------*/
+.aspirancia {
+    @include flex (flex, space-between, center);
+    color: $color-texto;
+    font-family: "Special Elite , system-ui";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
+    padding: 5px;
+
+    .formulario {
+        margin-left: 20px;
+        display: flex;
+        align-self: flex-end;
+        flex-direction: column;
+
+        img {
+            width: 300px;
+            height: 180px;
+            align-self: center;
+        }
+
+
+        form {
+            div {
+                label {
+                    margin-right: 20px;
+                    color: $color-texto;
+                    font-family: "Special Elite , system-ui";
+                    font-weight: 400;
+                    font-style: normal;
+                    font-size: 25px;
                 }
 
+            }
 
-                form {
-                    div {
-                        label {
-                            margin-right: 20px;
-                        }
+            .genero {
+                display: flex;
+                flex-direction: row;
+                align-self: center;
+                width: 100px;
+                box-shadow: none;
+                border: none;
 
-                    }
-
-                    .genero {
-                        display: flex;
-                        flex-direction: row;
-                        align-self: center;
-                        width: 100px;
-                        box-shadow: none;
-                        border: none;
-
-                        div {
-                            label {}
-
-                            imput {}
-                        }
-                    }
-
-                    .textarearesp {
-                        width: 100%;
-                        height: 200px;
-                        padding: 10px;
-                        font-size: 16px;
-                        box-sizing: border-box;
-                        resize: none;
+                div {
+                    label {
                         margin-right: 20px;
                     }
 
-                    div {
-                        input {
-                            width: 500px;
-                            height: 40px;
-                            padding: 10px;
-                            margin: 10px;
-                            border: 2px solid #333;
-                            border-radius: 5px;
-                            background-color: $color-texto;
-                            font-size: 22px;
-                            color: #333;
-                            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-                            font-family: "Special Elite", system-ui;
-                            align-items: flex-end;
-                        }
-
-                    }
+                    imput {}
                 }
             }
 
-            section {
-                h2 {
+            .textarearesp {
+                width: 100%;
+                height: 200px;
+                padding: 10px;
+                font-size: 16px;
+                box-sizing: border-box;
+                resize: none;
+                margin-right: 20px;
+            }
+
+            .formbot {
+                width: 200px;
+
+                .miimput {
+                    width: 500px;
+                    height: 40px;
+                    padding: 10px;
                     margin: 10px;
-                    text-align: center;
-                    font-size: 80px;
+                    border: 2px solid #333;
+                    border-radius: 5px;
+                    background-color: $color-texto;
+                    font-size: 22px;
+                    color: #333;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+                    font-family: "Special Elite", system-ui;
+                    align-items: flex-end;
                 }
 
-                img {
-                    width: 100%;
-                    height: auto;
-                    padding: 20px;
-                    margin-left: 30px;
-                    margin-right: 20px;
-                    align-self: center;
-                }
             }
+        }
+    }
+
+    .ok {
+        h2 {
+            margin: 10px;
+            text-align: center;
+            font-size: 80px;
+        }
+
+        .okey {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            margin-left: 30px;
+            margin-right: 20px;
+            align-self: center;
         }
     }
 }

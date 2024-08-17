@@ -1,4 +1,4 @@
-footer {
+.footer {
     background-color: rgba(180, 155, 10, 0.733);
     margin: 0px;
     padding: 15px;
@@ -13,7 +13,7 @@ footer {
         "logo parra red1"
         "logo parra red2"
     ;
-    img {
+    .logo-footer {
         grid-area: logo;
         height: 60%;
         align-self: center;
@@ -27,13 +27,13 @@ footer {
         grid-row: 1/3;
         font-size: 25px;
     }
-    div {
+    .red1 {
         grid-area: red1;
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin-bottom: 10px;
-        a {
+        .social-logo {
             width: 100%;
             max-width: 100px;
             min-width: 50px;
@@ -45,12 +45,12 @@ footer {
             text-align: left;
         }
     }
-    div {
+    .red2 {
         grid-area: red2;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        a {
+        .social-logo {
             width: 100%;
             max-width: 100px;
             min-width: 50px;
