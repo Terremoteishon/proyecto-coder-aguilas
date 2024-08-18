@@ -19,6 +19,7 @@ $font-size: 60px, 40px, 50px, 30px, 25px, 18px, 16px;
 %flex-colum {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
