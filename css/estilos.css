@@ -524,7 +524,15 @@ header {
 /*! ----------------- PAGINA JUEGOS ---------------------*/
 /*? ------------------- JUEGOS -----------------------*/
 .ultimos-juegos {
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 0px; }
+  .ultimos-juegos h2 {
+    color: white;
+    font-size: 50px;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 10px; }
   .ultimos-juegos .juegos {
     width: 98%;
     gap: 20px;
